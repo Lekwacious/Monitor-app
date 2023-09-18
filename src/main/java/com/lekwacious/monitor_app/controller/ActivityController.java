@@ -37,9 +37,6 @@ public class ActivityController {
     @PostMapping("/log")
     public ResponseEntity<?> addLog(@RequestBody ActivityRequest requestPayLoad){
         Activity activity = activityService.logActivity(requestPayLoad);
-//        log.info(String.valueOf(loggingRepository.getHealthStatus()));
-//       log.info(healthStatusProvider.getMetricsEndpoint().toString());
-//       log.info(healthStatusProvider.getHealthStatus().toString());
         return new ResponseEntity<>(new ActivityBaseResponse(true,"successful",
                 HttpStatus.CREATED.value(), LocalDate.now(), activity),HttpStatus.CREATED);
 
