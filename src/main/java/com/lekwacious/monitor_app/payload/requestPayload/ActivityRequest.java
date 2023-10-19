@@ -8,7 +8,4 @@ public class ActivityRequest {
     private String idNumber;
     private String title;
     private String description;
-   // private LocalDate date;
-    //private LocalTime timeStarted;
-    //private LocalTime timeEnded;
 }
